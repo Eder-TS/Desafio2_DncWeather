@@ -3,7 +3,7 @@
 :root{
     --primary: #0C70F2;
     --secondary: #00ABBD;
-    --info: #4F9CF9;
+    --info: #F4F4F4;
     --warning: #FFE492;
     --light: #F2F2F2;
 }
@@ -14,7 +14,7 @@
 .bg-secondary, .btn-secondary{
     background-color: var(--secondary) !important;
 }
-.bg-info, .btn-info{
+.bg-info{
     background-color: var(--info) !important;
 }
 .bg-warning, .btn-warning{
@@ -25,7 +25,22 @@
 }
  
 
-
 body {
     font-family: Inter;
 }
+
+    #clouds {
+        width: 70%;
+    }
+
+    #form {
+        width: 40%;
+    }
+        #first_name, #email, #cep, #latitude, #longitude {
+            color: #393939;
+            opacity: 50%;
+        }
+
+    button {
+        opacity: 90%;
+    }

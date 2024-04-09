@@ -12,38 +12,70 @@
     <title>DncWeather</title>
 </head>
 <body class="bg-light">
-    <nav class="navbar navbar-expand-lg bg-primary mb-5">
-      <div class="container-fluid d-flex">
-        <a class="navbar-brand fs-1 fw-bold text-white ms-5" href="#">DncWeather</a>
-        <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <nav class="navbar navbar-expand-lg bg-primary mb-5">
+    <div class="container-fluid d-flex">
+      <a class="navbar-brand fs-1 fw-bold text-white ms-5" href="#">DncWeather</a>
+      <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav fs-5 fw-bold ms-auto me-5">
-            <a class="nav-link text-white ms-auto" href="#">Endereço</a>
-            <a class="nav-link text-white ms-auto" href="#">Previsão do tempo</a>
-          </div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav fs-5 fw-bold ms-auto me-5">
+          <a class="nav-link text-white ms-auto" href="#">Endereço</a>
+          <a class="nav-link text-white ms-auto" href="#">Previsão do tempo</a>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-      <div class="container pt-2">
-        <div class="row">
-          <div class="col-2">
-          <!--spacer--> 
-          </div>
-          <div class="col-6 pt-5">
-            <p class="fs-1 fw-bold">Descubra Mais com Precisão: Previsões do Tempo e endereços   em tempo real.</p>
-          </div>
-          <div class="col text-end">
-              <img src="images/clouds.svg" class="img-fluid" alt="Nuvens e sol">
-          </div>
-          <div class="col-1">
-            <!--spacer--> 
-          </div>
-          </div>
+  <div class="container pt-2 mb-5 pb-5">
+    <div class="row">
+      <div class="col-2">
+      <!--spacer--> 
       </div>
+      <div class="col-6 pt-5 pb-5">
+        <p class="fs-1 fw-bolder lh-sm">Descubra Mais com Precisão: Previsões do Tempo e endereços   em tempo real.</p>
+      </div>
+      <div class="col text-center">
+          <img src="images/clouds.svg" class="img-fluid" id="clouds" alt="Nuvens e sol">
+      </div>
+      <div class="col-1">
+        <!--spacer--> 
+      </div>
+      </div>
+  </div>
+
+  <div class="container bg-white px-5 rounded-5 fs-5" id="form">
+    <div class="pt-5 mb-2 px-4">
+      <label for="exampleFormControlInput1" class="form-label pt-5 ps-1">Primeiro Nome:</label>
+      <input type="text" class="form-control py-2 border border-0 bg-info" id="first_name" placeholder="Insira seu primeiro nome:">
+    </div>
+    <div class="mb-2 pt-3 px-4">
+      <label for="exampleFormControlInput1" class="form-label ps-1">E-mail</label>
+      <input type="email" class="form-control py-2 border border-0 bg-info" id="email" placeholder="Insira seu e-mail">
+    </div>
+    <div class="mb-2 pt-3 px-4">
+      <label for="exampleFormControlInput1" class="form-label ps-1">Digite o CEP</label>
+      <input type="number" class="form-control py-2 border border-0 bg-info" id="cep" placeholder="Insira o CEP">
+    </div>
+    <div class="col mb-2 pt-3 px-4 pb-5">
+      <div class="row">
+        <label for="exampleFormControlInput1" class="form-label ps-1 ms-3">Digite a latitude e longitude para saber a previsão:</label>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="number" class="form-control py-2 border border-0 bg-info" id="latitude" placeholder="Latitude">
+        </div>
+        <div class="col">
+          <input type="number" class="form-control py-2 border border-0 bg-info" id="longitude" placeholder="Longitude">
+        </div>
+      </div>
+    </div>
+
+    <div class="d-grid px-4">
+      <button class="btn btn-primary fs-4 fw-bold" type="button">Acessar</button>
+    </div>
+  </div>
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
