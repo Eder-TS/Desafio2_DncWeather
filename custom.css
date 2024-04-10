@@ -41,6 +41,10 @@ body {
             opacity: 50%;
         }
 
-    button {
-        opacity: 90%;
+        button {
+            opacity: 90%;
+        }
+
+    #spacer {
+        height: 20%;
     }
