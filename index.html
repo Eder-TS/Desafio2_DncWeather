@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,8 +77,46 @@
     </div>
   </div>
 
-  <div id="spacer">
+  <div class="container-fluid" id="spacer">
     <!--spacer-->
+  </div>
+
+  <div class="container d-flex justify-content-center">
+    <div class="row d-flex align-items-end">
+      <div class="col-10">
+        <p class="h1 fw-bold">Resultado da busca por CEP:</p>
+      </div>
+      <div class="col">
+        <img src="images/location.svg" class="img-fluid" alt="Localizador">
+      </div>
+    </div>
+  </div>
+
+  <div class="container justify-content-center" id="output_adress">
+
+      <div class="row bg-primary text-white fw-bold fs-5">
+        <div class="col-3 pt-3 pb-3">
+          <p class="m-auto">Logradouro/nome</p>
+        </div>
+        <div class="col-3 pt-3 pb-3">
+          <p class="align-middle">Bairro/Distrito</p>
+        </div>
+        <div class="col-3 pt-3 pb-3 align-items-center">
+          <p class="m-auto">Localidade/UF</p>
+        </div>
+      </div>
+      <div class="row class="m-auto"">
+        <div class="col-3 align-items-center">
+          <p id="street" class="m-auto"></p>
+        </div>
+        <div class="col-3 align-items-center">
+          <p id="neighborhood" class="m-auto"></p>
+        </div>
+        <div class="col-3 align-items-center">
+          <p id="city" class="m-auto"></p>
+        </div>
+      </div>
+
   </div>
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
