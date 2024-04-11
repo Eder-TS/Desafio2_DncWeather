@@ -81,7 +81,7 @@
     <!--spacer-->
   </div>
 
-  <div class="container d-flex justify-content-center">
+  <div class="container d-flex justify-content-center pb-3">
     <div class="row d-flex align-items-end">
       <div class="col-10">
         <p class="h1 fw-bold">Resultado da busca por CEP:</p>
@@ -92,31 +92,54 @@
     </div>
   </div>
 
-  <div class="container justify-content-center" id="output_adress">
-
-      <div class="row bg-primary text-white fw-bold fs-5">
-        <div class="col-3 pt-3 pb-3">
-          <p class="m-auto">Logradouro/nome</p>
-        </div>
-        <div class="col-3 pt-3 pb-3">
-          <p class="align-middle">Bairro/Distrito</p>
-        </div>
-        <div class="col-3 pt-3 pb-3 align-items-center">
-          <p class="m-auto">Localidade/UF</p>
-        </div>
+  <div class="container" id="output_adress">
+    <div class="row bg-primary text-white fw-bold fs-5 rounded-top-4">
+      <div class="col-3 pt-3 pb-3">
+        <p class="m-auto text-center">Logradouro/nome</p>
       </div>
-      <div class="row class="m-auto"">
-        <div class="col-3 align-items-center">
-          <p id="street" class="m-auto"></p>
-        </div>
-        <div class="col-3 align-items-center">
-          <p id="neighborhood" class="m-auto"></p>
-        </div>
-        <div class="col-3 align-items-center">
-          <p id="city" class="m-auto"></p>
-        </div>
+      <div class="col-3 pt-3 pb-3">
+        <p class="m-auto text-center">Bairro/Distrito</p>
       </div>
+      <div class="col-3 pt-3 pb-3">
+        <p class="m-auto text-center">Localidade/UF</p>
+      </div>
+    </div>
+    <div class="row bg-white fw-bold fs-5 rounded-bottom-4">
+      <div class="col-3 pt-3 pb-3">
+        <p id="street" class="m-auto text-center">--</p>
+      </div>
+      <div class="col-3 pt-3 pb-3">
+        <p id="neighborhood" class="m-auto text-center">--</p>
+      </div>
+      <div class="col-3 pt-3 pb-3">
+        <p id="city" class="m-auto text-center">--</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="container" id="output_adress">
+    <div class="row bg-primary text-white fw-bold fs-5 rounded-top-4">
+      <div class="col-3 pt-3 pb-3">
+        <p class="m-auto text-center">Logradouro/nome</p>
+      </div>
+      <div class="col-3 pt-3 pb-3">
+        <p class="m-auto text-center">Bairro/Distrito</p>
+      </div>
+      <div class="col-3 pt-3 pb-3">
+        <p class="m-auto text-center">Localidade/UF</p>
+      </div>
+    </div>
+    <div class="row bg-white fw-bold fs-5 rounded-bottom-4">
+      <div class="col-3 pt-3 pb-3">
+        <p id="street" class="m-auto text-center">--</p>
+      </div>
+      <div class="col-3 pt-3 pb-3">
+        <p id="neighborhood" class="m-auto text-center">--</p>
+      </div>
+      <div class="col-3 pt-3 pb-3">
+        <p id="city" class="m-auto text-center">--</p>
+      </div>
+    </div>
   </div>
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
