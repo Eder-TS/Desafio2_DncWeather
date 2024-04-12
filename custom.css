@@ -50,8 +50,10 @@ body {
         height: 200px;
     }
 
-    #output_adress{
+    #output_adress {
         width: 51%;
     }
 
-    
+    #output_weather {
+        width: 51%;
+    }

@@ -92,7 +92,7 @@
     </div>
   </div>
 
-  <div class="container" id="output_adress">
+  <div class="container pb-5" id="output_adress">
     <div class="row bg-primary text-white fw-bold fs-5 rounded-top-4">
       <div class="col-3 pt-3 pb-3">
         <p class="m-auto text-center">Logradouro/nome</p>
@@ -113,34 +113,44 @@
       </div>
       <div class="col-3 pt-3 pb-3">
         <p id="city" class="m-auto text-center">--</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container d-flex justify-content-center pt-5 pb-3">
+    <div class="row d-flex align-items-end pt-5">
+      <div class="col-10">
+        <p class="h1 fw-bold">Previsão do tempo na região:</p>
+      </div>
+      <div class="col">
+        <img src="images/clouds_reverse.svg" class="img-fluid" alt="Nuvens">
+      </div>
+    </div>
+  </div>
+  
+  <div class="pb-5">
+    <div class="pb-5">
+      <div class="container bg-white fw-bold fs-5 border border-primary rounded-4" id="output_weather">
+        <div class="col pt-3 pb-3">
+          <p id="street" class="m-auto text-center">Previsão de tempo de acordo com a região: <span id="temperature">--° C</span></p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="container" id="output_adress">
-    <div class="row bg-primary text-white fw-bold fs-5 rounded-top-4">
-      <div class="col-3 pt-3 pb-3">
-        <p class="m-auto text-center">Logradouro/nome</p>
-      </div>
-      <div class="col-3 pt-3 pb-3">
-        <p class="m-auto text-center">Bairro/Distrito</p>
-      </div>
-      <div class="col-3 pt-3 pb-3">
-        <p class="m-auto text-center">Localidade/UF</p>
-      </div>
-    </div>
-    <div class="row bg-white fw-bold fs-5 rounded-bottom-4">
-      <div class="col-3 pt-3 pb-3">
-        <p id="street" class="m-auto text-center">--</p>
-      </div>
-      <div class="col-3 pt-3 pb-3">
-        <p id="neighborhood" class="m-auto text-center">--</p>
-      </div>
-      <div class="col-3 pt-3 pb-3">
-        <p id="city" class="m-auto text-center">--</p>
+  <div class="pt-5">
+    <div class="container-fluid d-flex bg-primary">
+      <div class="fs-5 fw-bold ms-auto me-4">
+        <p class="text-white d-flex m-auto p-3">
+          <a class="nav-link" href="#">Termos de Uso</a>
+          &nbsp; | &nbsp;
+          <a class="nav-link" href="#">Política de privacidade</a>
+        </p> 
       </div>
     </div>
   </div>
+  
+
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
