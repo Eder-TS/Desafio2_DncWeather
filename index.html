@@ -21,8 +21,8 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav fs-5 fw-bold ms-auto me-5">
-          <a class="nav-link text-white ms-auto" href="#">Endereço</a>
-          <a class="nav-link text-white ms-auto" href="#">Previsão do tempo</a>
+          <a class="nav-link text-white ms-auto" href="#form">Endereço</a>
+          <a class="nav-link text-white ms-auto" href="#form">Previsão do tempo</a>
         </div>
       </div>
     </div>
@@ -45,37 +45,40 @@
       </div>
   </div>
 
-  <div class="container bg-white px-5 rounded-5 fs-5" id="form">
-    <div class="pt-5 mb-2 px-4">
-      <label for="exampleFormControlInput1" class="form-label pt-5 ps-1">Primeiro Nome:</label>
-      <input type="text" class="form-control py-2 border border-0 bg-info" id="first_name" placeholder="Insira seu primeiro nome:">
-    </div>
-    <div class="mb-2 pt-3 px-4">
-      <label for="exampleFormControlInput1" class="form-label ps-1">E-mail</label>
-      <input type="email" class="form-control py-2 border border-0 bg-info" id="email" placeholder="Insira seu e-mail">
-    </div>
-    <div class="mb-2 pt-3 px-4">
-      <label for="exampleFormControlInput1" class="form-label ps-1">Digite o CEP</label>
-      <input type="number" class="form-control py-2 border border-0 bg-info" id="cep" placeholder="Insira o CEP">
-    </div>
-    <div class="col mb-2 pt-3 px-4 pb-5">
-      <div class="row">
-        <label for="exampleFormControlInput1" class="form-label ps-1 ms-3">Digite a latitude e longitude para saber a previsão:</label>
+  <form method="post">
+    <div class="container bg-white px-5 rounded-5 fs-5" id="form">
+      <div class="pt-5 mb-2 px-4">
+        <label for="first_name" class="form-label pt-5 ps-1">Primeiro Nome:</label>
+        <input type="text" class="form-control py-2 border border-0 bg-info" id="first_name" placeholder="Insira seu primeiro nome:" 
+          autocomplete="name" required>
       </div>
-      <div class="row">
-        <div class="col">
-          <input type="number" class="form-control py-2 border border-0 bg-info" id="latitude" placeholder="Latitude">
+      <div class="mb-2 pt-3 px-4">
+        <label for="email" class="form-label ps-1">E-mail</label>
+        <input type="email" class="form-control py-2 border border-0 bg-info" id="email" placeholder="Insira seu e-mail" autocomplete="email" required>
+      </div>
+      <div class="mb-2 pt-3 px-4">
+        <label for="cep" class="form-label ps-1">Digite o CEP</label>
+        <input type="number" class="form-control py-2 border border-0 bg-info" id="cep" placeholder="Insira o CEP" required>
+      </div>
+      <div class="col mb-2 pt-3 px-4 pb-5">
+        <div class="row">
+          <label for="latitude" for="longitude" class="form-label ps-1 ms-3">Digite a latitude e longitude para saber a previsão:</label>
         </div>
-        <div class="col">
-          <input type="number" class="form-control py-2 border border-0 bg-info" id="longitude" placeholder="Longitude">
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control py-2 border border-0 bg-info" id="latitude" placeholder="Latitude" required>
+          </div>
+          <div class="col">
+            <input type="number" class="form-control py-2 border border-0 bg-info" id="longitude" placeholder="Longitude" required>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="d-grid px-4">
-      <button class="btn btn-primary fs-4 fw-bold mb-5" type="button">Acessar</button>
+      <div class="d-grid px-4">
+        <button class="btn btn-primary fs-4 fw-bold mb-5" type="submit" onclick="Validations()">Acessar</button>
+      </div>
     </div>
-  </div>
+  </form>
 
   <div class="container-fluid" id="spacer">
     <!--spacer-->
@@ -150,10 +153,10 @@
     </div>
   </div>
   
-
+  <script src="script.js"></script>
       
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
