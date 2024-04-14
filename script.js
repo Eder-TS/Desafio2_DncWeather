@@ -35,7 +35,7 @@ function CepValidation(){
 
     if (!itsValid){
         alert("Insira um cep válido, contendo oito (8) números, sem espaços e sem hífen ou outros caracteres.)")
-        return
+        
     } else {
         LatitudeValidation()
     }
@@ -43,12 +43,12 @@ function CepValidation(){
 
 function LatitudeValidation(){
     let latitude = document.getElementById("latitude").value
-    const latitudePattern = /(-?[0-9]{2}[.]+[0-9]{4}$)/
+    const latitudePattern = /^(-?[0-9]{2}[.]+[0-9]{4}$)/
 
     let itsValid = latitude.match(latitudePattern)
 
     if (!itsValid){
-        alert("Insira uma latitude válida, contendo apenas números e ponto como 12.3456, pode ser usado hífen para indicar latitude sul.")
+        alert("Insira uma latitude válida, contendo apenas números e ponto como 12.3456. Pode ser usado um hífen no início para indicar latitude sul.")
         return
     } else {
         LongitudeValidation()
@@ -62,7 +62,7 @@ function LongitudeValidation(){
     let itsValid = longitude.match(longitudePattern)
 
     if (!itsValid){
-        alert("Insira uma longitude válida, contendo apenas números e ponto como 12.3456, pode ser usado hífen para indicar longitude oeste.")
+        alert("Insira uma longitude válida, contendo apenas números e ponto como 12.3456. Pode ser usado um hífen no início indicar longitude oeste.")
         return
     } else {
         FormSubmit()
@@ -71,7 +71,7 @@ function LongitudeValidation(){
 
 function FormSubmit(){
     GetAdressByCep()
-    //GetWeatherByCoordinates()
+    GetWeatherByCoordinates()
 }
 
 async function GetAdressByCep(){
@@ -94,69 +94,23 @@ async function GetAdressByCep(){
         window.location.href = "#output_adress"
     } catch (error) {
         alert("CEP inválido")
-        console.log(error.message)
     }
-
-
-
-
-    /*fetch('https://viacep.com.br/ws/' + cep + '/json/')
-        .then((response) => {
-            return response.json()
-        })
-        .then((response) => {
-
-            document.getElementById("street").innerHTML = response.logradouro
-            document.getElementById("neighborhood").innerHTML = response.bairro
-            document.getElementById("city_state").innerHTML = response.localidade + "/" +response.uf
-
-            window.location.href = "#output_adress"
-        })
-        .catch((error) => {
-            //alert(error.message)
-            //console.log(error.message)
-            console.log(error)
-        })*/
 }
 
-/*async function pegaClimaPelaCoordenada() {
-    const lat = document.getElementById('latitude').value
-    const lon = document.getElementById('longitude').value
-
+async function GetWeatherByCoordinates() {
+    const latitude = document.getElementById('latitude').value
+    const longitude = document.getElementById('longitude').value
 
     try {
-        const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + lat + 
-            '&longitude=' + lon + '&hourly=temperature_2m')
+        const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + 
+            '&longitude=' + longitude + '&current=temperature_2m')
    
         const data = await response.json()
-        console.log(data)
 
-        for (let index = 0; index < data.hourly.temperature_2m.length; index++) {
-            
-            console.log(data.hourly.time[index], data.hourly.temperature_2m[index])
-            const hora = data.hourly.time[index]
-            const temperatura = data.hourly.temperature_2m[index]
-            
-            document.getElementById('respostas').innerHTML += "<div>" + hora + " " + temperatura + "°C </div>"
-        }
+        document.getElementById('temperature').innerHTML = data.current.temperature_2m + "°C"
 
     } catch (error) {
-        alert(error.message)
+        alert("Coordenadas inválidas") 
     }
     
 }
-
-function pegaEnderecoPeloCep() {
-    const cep = document.getElementById("cep").value
-
-    fetch('https://viacep.com.br/ws/' + cep + '/json/')
-        .then((response) => {
-            return response.json()
-        })
-        .then((response) => {
-            console.log(response)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-}*/
