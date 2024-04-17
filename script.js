@@ -35,7 +35,7 @@ function CepValidation(){
 
     if (!itsValid){
         alert("Insira um cep válido, contendo oito (8) números, sem espaços e sem hífen ou outros caracteres.)")
-        
+        return
     } else {
         LatitudeValidation()
     }
@@ -48,7 +48,7 @@ function LatitudeValidation(){
     let itsValid = latitude.match(latitudePattern)
 
     if (!itsValid){
-        alert("Insira uma latitude válida, contendo apenas números e ponto como 12.3456. Pode ser usado um hífen no início para indicar latitude sul.")
+        alert("Insira uma latitude válida, contendo 6 dígitos, apenas números e ponto como 12.3456. Pode ser usado um hífen no início para indicar latitude sul.")
         return
     } else {
         LongitudeValidation()
@@ -62,7 +62,7 @@ function LongitudeValidation(){
     let itsValid = longitude.match(longitudePattern)
 
     if (!itsValid){
-        alert("Insira uma longitude válida, contendo apenas números e ponto como 12.3456. Pode ser usado um hífen no início indicar longitude oeste.")
+        alert("Insira uma longitude válida, contendo 6 dígitos, apenas números e ponto como 12.3456. Pode ser usado um hífen no início indicar longitude oeste.")
         return
     } else {
         FormSubmit()
