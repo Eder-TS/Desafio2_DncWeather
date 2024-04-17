@@ -34,7 +34,7 @@ function CepValidation(){
     let itsValid = cep.match(cepPattern)
 
     if (!itsValid){
-        alert("Insira um cep válido, contendo oito (8) números, sem espaços e sem hífen ou outros caracteres.)")
+        alert("Insira um cep válido, contendo oito (8) números, sem espaços e sem hífen ou outros caracteres.")
         return
     } else {
         LatitudeValidation()
