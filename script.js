@@ -35,7 +35,7 @@ function CepValidation(){
 
     if (!itsValid){
         alert("Insira um cep válido, contendo oito (8) números, sem espaços e sem hífen ou outros caracteres.)")
-        
+        return
     } else {
         LatitudeValidation()
     }
@@ -43,7 +43,7 @@ function CepValidation(){
 
 function LatitudeValidation(){
     let latitude = document.getElementById("latitude").value
-    const latitudePattern = /^(-?[0-9]{2}[.]+[0-9]{4}$)/
+    const latitudePattern = /^(-?[0-9]{2}[.]+[0-9]{2}$)/
 
     let itsValid = latitude.match(latitudePattern)
 
@@ -57,7 +57,7 @@ function LatitudeValidation(){
 
 function LongitudeValidation(){
     let longitude = document.getElementById("longitude").value
-    const longitudePattern = /(-?[0-9]{2}[.]+[0-9]{4}$)/
+    const longitudePattern = /(-?[0-9]{2}[.]+[0-9]{2}$)/
 
     let itsValid = longitude.match(longitudePattern)
 
